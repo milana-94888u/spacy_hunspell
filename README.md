@@ -10,11 +10,13 @@ Add the spaCyHunSpell to the spaCy pipeline.
 
 ```
 import spacy
+from spacy.language import Language
 from spacy_hunspell import spaCyHunSpell
 
 nlp = spacy.load('en_core_web_sm')
 hunspell = spaCyHunSpell(nlp, 'mac')
-nlp.add_pipe(hunspell)
+Language.component("hunspell")(hunspell)
+nlp.add_pipe("hunspell")
 
 doc = nlp('I can haz cheezeburger.')
 haz = doc[2]
