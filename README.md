@@ -32,6 +32,7 @@ hunspell = spaCyHunSpell(nlp, ('en_US.dic', 'en_US.aff'))
 ```
 
 You can find the [English dictionary files here](http://wordlist.aspell.net/dicts/).
+You can find the [dictionary files for other languages here](https://github.com/LibreOffice/dictionaries).
 
 ## Installation
 
